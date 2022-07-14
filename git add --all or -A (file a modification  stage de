@@ -1,0 +1,41 @@
+local working directory->stage->local repository->remote
+
+
+
+->git add --all or -A (file a modification  stage de)
+->git reset (reset dile stage theke file aber agger obosthe ashe)
+->git add . (current folder ja acche seta stage e dia dibe)
+->git add * (stage deleted file chara baki guli ke se stage e dia de shudu oi folder ar)
+->git add *.php(php extension ar joto file thakbe se stage e dia de shudu stage ar  del. file chara )
+
+
+->git add two.php (fixed modify file ke stage de)
+->git commit -m "write some details what you change"(commit korara sathe sathe local repository tey chole jai mani project ti update kora holo)
+->git reset HEAD~ (repository the commit kora file aber local working directory rollback kore)
+
+->git reset --hard (delete kora file chole asbe)
+->git rm two.php (file remove kore abong stage e o dia de)
+->git rm two.php -f (jodi file kichu change kori kintu stage di nai tahole git rm two.php dile kaj hobe nah se khette -f (forge ) use korle file del. kore dibe )
+
+->git rm --cached two.php(file modify kore ai cmd dile file del. na kore modify code guli stage  e dia de)
+->git rm -r(recursive) folder ( folder ar moddhe shob file d. kore dibe)
+->pwd (kon directory)
+-> git branch developmnt (create a branch)
+===========
+merge kora file conflicts hoi tahole file gia thick korete hobe terpor niche comman aber dite hobe
+->git add .
+->git commit -m "solved"
+=========
+==local working directory theke jodi kono kichu remote direectory tey nia jao hoi tahole take git ar vashai bole push
+==remote directory theke jodi kon change local directory tey nia asha hoi thake bole fetch
+==fetch korle onek shomoy file conflict kore file or file ashe nah ai jonno amr git pull korbo tahole remote theke shob chole asbe abong ki fetch ar kaj o korbe + merge o kore dibe
+=========
+->git remote add origin https://github.com/kazijuwel/muljanhighschool.git
+->git push origin main (remote e push korle origin dite hoy origin mani remote bhujai r main branch e push korlam)
+->git push origin development (remote directory tey development name akti branch tori hobe abong shob file dia dibe )
+===========
+->git fetch(remot theke change nia asbe)
+->git merge(fetch cmd deyar por merge cmd dite hoy change guli dkhar jonno)
+-> git checkout dvelopment (branch switched kore orthat ak branch theke r ak branch e jab
+)
+->git merge main -m "main branch ar sath dvelopmet brancg ar merge kora hoy orthat main thake file development ar dike merge hot"
